@@ -46,7 +46,7 @@ res.sendFile(filePath);
 
 app.post("/login",(req,res)=>{
     console.log("Request body as part of login ",req.body)
-    res.end("Login Successful")
+    res.send({status:true,message:"Login Successful"})
 })
 
 app.listen(PORT, function (err) {
